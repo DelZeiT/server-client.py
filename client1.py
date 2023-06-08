@@ -1,12 +1,8 @@
 import socket
 
-host = socket.gethostbyname(socket.gethostname())         #узнаем наш IP
-port = 0                        #наш порт
-
-server = ("91.236.238.20", 9090)      #адрес сервера
-
-client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-client.bind((host, port))   #привязываем адрес к сокету
+server = ("localhost", 9090)      #адрес сервера
+client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+client.connect(('localhost', 12953))
 
 name = input('Имя: ')       #вводим имя
 
