@@ -2,7 +2,7 @@ import socket
 
 server = ("localhost", 9090)  # адрес сервера
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client.connect(('localhost', 12953))
+client.connect(('localhost', 9090))
 
 name = input('Имя: ')  # вводим имя
 
