@@ -11,8 +11,8 @@ flag = True
 while flag:
     message = input()  # вводим сообщение
     if message != '':  # если сообщение не равно пустому символу
-        client.sendto(('[' + name + ']:' + message).encode('utf-8'), server)
+        client.sendall((f'[{name}]: + {message}').encode('utf-8'))
     if message == 'выход':  # если клиент хочет выйти из чата
-        client.sendto(('[' + name + '] - покинул чат').encode('utf-8'), server)
+        client.sendall((f'[{name}] - покинул чат').encode('utf-8'))
         flag = False
 client.close()
